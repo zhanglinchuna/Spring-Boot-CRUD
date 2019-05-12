@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>成功！！</h1>
+<!--th:text 将div里面的文本内容设置为 ${hello}的内容
+    th:id="${hello}" --》将原来div标签的id属性id="div01"改成id="hello"
+    th:class="${hello}"--》将原来div标签的class属性class="myDiv"改成class="hello"
+-->
+<div id="div01" class="myDiv" th:id="${hello}" th:class="${hello}" th:text="${hello}">这是显示欢迎信息</div>
+<hr/>
+
+<div th:text="${hello}"></div><!-- th:text --》会转义特殊字符 -->
+<div th:utext="${hello}"></div><!-- th:utext --》不会转义特殊字符 -->
+<hr/>
+
+<!-- th:each每次遍历都会生成当前这个标签： 3个h4 -->
+<h4 th:text="${user}"  th:each="user:${users}"></h4>
+<hr/>
+
+<h4>
+    <span th:each="user:${users}"> [[${user}]] </span>
+</h4>
+
+
+
+</body>
+</html>

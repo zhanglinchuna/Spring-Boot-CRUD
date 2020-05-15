@@ -11,6 +11,7 @@
     </parent>
     <groupId>com.zhanglinchun</groupId>
     <artifactId>spring-boot-web-restfulcrud</artifactId>
+    <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-web-restfulcrud</name>
     <description>Demo project for Spring Boot</description>
@@ -40,6 +41,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- 引入jquery-webjar -->
         <dependency>
@@ -53,6 +59,14 @@
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>4.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>tools</artifactId>
+            <version>1.8.0</version>
+            <scope>system</scope>
+            <systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
         </dependency>
     </dependencies>
 
